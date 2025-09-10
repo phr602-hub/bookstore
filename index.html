@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>리디북스 - RIDI</title>
+    <title>도서전자책 - 리디</title>
      <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -20,11 +20,20 @@
                     <img src="./img/RIDI_logo.svg" alt="리디 로고">
                 </div>
                 <div class="h_right">
+                  <div class="search-container">
                     <div class="search">
                         <img src="./img/search.png" alt="검색">
-                        <input type="text">
+                        <input type="text" id="search-input" />
                     </div>
-                
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="dropdown-header">
+                          <span>최근 검색어</span>
+                          <a href="#">검색어 저장 켜기</a>
+                        </div>
+                        <div class="no-search">검색어 저장기능이 꺼져있습니다.</div>
+                        <ul id="recent-list"></ul>
+                    </div>
+                </div>
                     <div class="mypage">
                         <ul>
                             <li><a href="#">회원가입</a></li>
@@ -33,6 +42,22 @@
                     </div>
                 </div>
             </div>
+                <script>
+                  const searchInput = document.getElementById("search-input");
+                  const dropdown = document.getElementById("search-dropdown");
+                  const container = document.querySelector(".search-container");
+
+                  searchInput.addEventListener("focus", () => {
+                    dropdown.classList.add("show");
+                  });
+
+                  document.addEventListener("click", (e) => {
+                    if (!container.contains(e.target)) {
+                      dropdown.classList.remove("show");
+                    }
+                  });
+                </script>
+
 
             <div class="header_b">
                 <nav>
@@ -81,16 +106,14 @@
 
 
 
-<!-- 오토 슬라이더 -->
+
+
     <div id="slider">
         <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
     </div>
 
       <div class="swiper-button-next"></div>
@@ -102,19 +125,22 @@
 
 
 
+
     <div class="category2">
         <section class="round-menu">
         <ul>
-            <li><a href="#"><i class="fas fa-star"></i>신간</a></li>
-            <li><a href="#"><i class="fas fa-crown"></i>북스 베스트</a></li>
-            <li><a href="#"><i class="fas fa-certificate"></i>단독 선출간</a></li>
-            <li><a href="#"><i class="fas fa-bolt"></i>이벤트</a></li>
-            <li><a href="#"><i class="fas fa-ticket-alt"></i>이달의 쿠폰</a></li>
-            <li><a href="#"><i class="fas fa-calendar-alt"></i>신작 캘린더</a></li>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i>혜택 모아봄</a></li>
+            <li><a href="#"><img src="./img/category2(1).png" alt="신간">신간</a></li>
+            <li><a href="#"><img src="./img/category2(2).png" alt="북스 베스트">북스 베스트</a></li>
+            <li><a href="#"><img src="./img/category2(3).png" alt="단독 선출간">단독 선출간</a></li>
+            <li><a href="#"><img src="./img/category2(4).png" alt="이벤트">이벤트</a></li>
+            <li><a href="#"><img src="./img/category2(5).png" alt="이달의 쿠폰">이달의 쿠폰</a></li>
+            <li><a href="#"><img src="./img/category2(6).png" alt="신작 캘린더">신작 캘린더</a></li>
+            <li><a href="#"><img src="./img/category2(7).png" alt="혜택 모아봄">혜택 모아봄</a></li>
         </ul>
         </section>
     </div>
+
+
 
 
 
@@ -122,33 +148,32 @@
         지금 많이 읽고 있는 작품
     </div>
 
-
-<!-- 첫번째 3*3 -->
 <div class="section">  
     <div class="swiper Swiper1">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
-        <div class="swiper-slide">Slide 11</div>
-        <div class="swiper-slide">Slide 12</div>
-        <div class="swiper-slide">Slide 13</div>
-        <div class="swiper-slide">Slide 14</div>
-        <div class="swiper-slide">Slide 15</div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+
       </div>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-prev custom-nav"></div>
+      <div class="swiper-button-next custom-nav"></div>
       <div class="swiper-pagination"></div>
     </div>
 </div>
+
+
+
 
 
 
@@ -156,21 +181,17 @@
         오늘, 리디의 발견
     </div>
 
-
-
-<!-- 가로 슬라이더 -->
 <div class="section2">
     <div class="swiper mySwiper2">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
     </div>
 
     <div class="swiper-button-next"></div>
@@ -180,10 +201,11 @@
 </div>
 
 
+
+
     <div class="title2">
         MD's Pick
     </div>
-
 
 
     <div class="banner">
@@ -193,30 +215,29 @@
 
 
 
+
+
+
       <div class="title2">
       베스트
       </div>
 
-
-<!-- 두번쨰 3*3 -->
       <div class="section3">
     <div class="swiper Swiper3">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
-        <div class="swiper-slide">Slide 11</div>
-        <div class="swiper-slide">Slide 12</div>
-        <div class="swiper-slide">Slide 13</div>
-        <div class="swiper-slide">Slide 14</div>
-        <div class="swiper-slide">Slide 15</div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+
       </div>
 
       <div class="swiper-button-next"></div>
@@ -227,22 +248,24 @@
 
 
 
+
+
+
+
+
       <div class="title2">
       지금, 리디에서만! 선 출간 신작
       </div>
 
-
-<!-- 두번쨰 가로 배너 -->
   <div class="section4">
       <div class="swiper mySwiper2">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
       </div>
 
       <div class="swiper-pagination2"></div>
@@ -250,25 +273,25 @@
   </div>
 
 
+
+
+
+
       <div class="title2">
       새로 나온 작품
       </div>
 
-
-
-  <!-- 두번쨰 가로 슬라이더 -->
   <div class="section5">
       <div class="swiper mySwiper5">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
 
       </div>
       <div class="swiper-button-next"></div>
@@ -278,11 +301,15 @@
   </div>
 
 
+
+
+
+
+
+
       <div class="title2">
       짧지만 강렬한 서사! 우주라이크소설
       </div>
-
-
 
   <div class="section6">
       <div class="swiper mySwiper6">
@@ -300,9 +327,73 @@
   </div>
 
 
+
+
+
+
+
       <div class="title2">
       이주의 셀렉트 인기도서 TOP 10
       </div>
+
+    <div class="section7">
+        <div class="swiper mySwiper7">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination2"></div>
+      </div>
+    </div>
+
+
+
+    
+    <div class="title2">
+        이벤트
+    </div>
+    <div class="banner2">
+      
+    </div>
+
+
+
+    
+      <div class="title2">
+      지금, 리디에서만 볼 수 있는 도서
+      </div>
+
+    <div class="section8">
+        <div class="swiper mySwiper8">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination2"></div>
+      </div>
+    </div>
+
+
+
+
 
   <hr>
 <footer class="footer">
@@ -320,7 +411,7 @@
           <ul>
             <li><a href="#">제휴카드</a></li>
             <li><a href="#">뷰어 다운로드</a></li>
-            <li><a href="#">CPA사이트</a></li>
+            <li><a href="#">CP사이트</a></li>
             <li><a href="#">리디바탕</a></li>
           </ul>
         </div>
@@ -366,6 +457,7 @@
 </footer>
 
 
+<script src ="./js/book.js"></script>
 
     <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -464,6 +556,30 @@
         clickable: true,
       },
 
+    });
+
+    var swiper = new Swiper(".mySwiper7", {
+      slidesPerView: 6,
+      spaceBetween: 5,
+      pagination: {
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+      var swiper = new Swiper(".mySwiper8", {
+      slidesPerView: 6,
+      spaceBetween: 5,
+      pagination: {
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
 
   </script>
