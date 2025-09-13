@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+
+
+body {font-family: 'Pretendard';}
+.container {width: 1120px; height: 100%; margin: 0 auto; }
+
+
+
+
+/*   header   */
+header{width: 100%; height: 115px;}
+.header_top {width: 100%; height: 50%; display: flex; justify-content: space-between; align-items: center; }
+
+
+.logo {width: 70px; height: 45px;}
+.logo img {width: 58px; height: 55px; margin-left: 6px;}
+
+
+
+.h_right {width: 450px; height: 35px; margin-top: 5px; display: flex; justify-content: space-between;}
+
+
+
+.search {display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; padding: 0 8px; width: 260px; height: 40px; background-color: #f6f6f6; margin-left: 55px; margin-top: 2px; border: none;}
+.search input {border: none; outline: none; flex: 1; font-size: 18px;background-color: #f6f6f6; margin-left: 13px;  caret-color: #1E9EFF;}
+.search img {width: 20px; height: 20px;}
+
+/*  최근검색어 창  */
+.search-container {position: relative;}
+.search-dropdown {position: absolute; top: 50px; left: 55px;width: 470px;background: white;border: 1px solid #f0f0f0;border-radius: 12px;display: none;z-index: 999;padding: 20px; box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.08);}
+
+.dropdown-header span {font-size: 14px; font-weight: bold;}
+.dropdown-header a {font-weight: normal; color: #999; font-size: 12px; text-decoration: none;}
+.search-dropdown.show {display: block;}
+.dropdown-header {display: flex;justify-content: space-between;margin-bottom: 20px;font-weight: bold;}
+#recent-list {list-style: none;padding: 0;margin: 0;}
+.no-search {text-align: center;color: #bbbbbb;font-size: 15px;line-height: 1.5;padding: 20px 0;margin-top: 28px; margin-bottom: 30px;}
+
+
+
+.mypage ul {display: flex; gap: 23px; margin-top: 10px; height: 100%;}
+.mypage ul li a {font-size: 13px; font-weight:600; color: #7b7b7b; margin-right: 4px; }
+
+
+
+.title {width: 1120px; height: 58px; margin: 0 auto;}
+.title ul {width: 700px; height: 55px; margin-left: 15px; margin-top: 2px; display: flex; gap: 21px; align-items: center;}
+.title ul li a {font-size: 16px; font-weight: 600; color: #333;}
+.title ul li a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+
+.header_b {width: 100%; height: 50%; display: flex; justify-content: space-between; align-items: center;}
+.header_b nav {width: 300px; height: 15px;}
+.header_b nav ul {display: flex; gap: 24px; margin-left: 6px;}
+.header_b nav ul li a {font-size: 16px; font-weight: 600; color: #333;}
+.header_b nav ul li {font-size: 16px; font-weight: 600; color: #1E9EFF;}
+.header_b nav ul li a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+
+.category {width: 220px; height: 40px; margin-top: 15px;}
+.category ul {display: flex;  gap: 25px; font-size: 15px;  font-weight: 600; color: #333; margin-right: 6px; margin-top: 5px;}
+.category .icon {font-size: 13px; margin-right: 6px; margin-top: 6px;}
+
+
+
+
+.category2 { width: 1120px; margin: 0 auto; padding: 28px 0 32px; background: #fff; margin-top: 5px;}
+.round-menu ul {display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 0; margin-top: 2px; padding: 0; list-style: none;} 
+.round-menu ul li {display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.round-menu ul li a {display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #222; font-size: 14px; font-weight: 400; white-space: nowrap; gap: 5px;}
+.category2 img {width: 70px; height: 70px; display: flex;}
+
+
+
+hr{border: none; border-top: 1px solid #F0F0F0;}
+
+
+.title2 {width: 1120px; height: 45px; margin: 0 auto; margin-block-start: 40px;}
+.title2 {font-size: 22px; font-weight: 600;}
+
+
+
+.section {width: 1120px; height: 350px; margin: 0 auto;}
+
+.section2 {width: 1120px; height: 330px; margin: 0 auto;}
+
+.banner {width: 1120px; height: 235px; margin: 0 auto; background: #ffbbbb;}
+
+.section3 {width: 1120px; height: 40px; margin: 0 auto;}
+
+
+.section4 {width: 1120px; height: 40px; margin: 0 auto;}
+
+.section7 {width: 1120px; height: 330px; margin: 0 auto;}
+
+.banner2 {width: 1120px; height: 135px; margin: 0 auto; background: #ffbbbb;}
+
+.section8 {width: 1120px; height: 330px; margin: 0 auto;}
+
+
+/*   footer   */
+footer{width: 100%; height: 250px;}
+.footer {background-color: #fff; color: #787878; font-size: 12px; line-height: 1.8; padding: 48px 0 64px; border-top: 1px solid #eee; position: relative;}
+.footer-wrapper {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;}
+.footer-left {display: flex; flex: 1;}
+.footer-columns {display: flex; flex-wrap: wrap; gap: 115px;}
+.footer-column h4 {font-weight: bold; margin-bottom: 12px; font-size: 15px;}
+.footer-column ul {list-style: none; padding: 0; margin: 0;}
+.footer-column li {margin-bottom: 6px; display: flex; align-items: center; gap: 6px;}
+.footer-column a {color: #787878; text-decoration: none;}
+.footer-column a:hover {text-decoration: none;}
+.footer-column i {color: #888; font-size: 14px;}
+.badge-new {background: #00c8ff; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 999px; margin-left: 4px;}
+.footer-column a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+
+/* SNS 오른쪽 원형 아이콘 */
+.footer-right {display: flex; flex-direction: column; align-items: flex-end; margin-top: 4px;}
+.footer-sns-icon {display: flex; gap: 10px;}
+.footer-sns-icon a {width: 45px; height: 45px; border: 1px solid #e3e3e3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #787878; font-size: 17px; background: #fff; transition: background 0.2s;}
+.footer-sns-icon a:hover {background-color: #f0f0f0;}
+
+/* 하단 정보 */
+.footer-bottom {font-size: 12px; color: #787878; margin-top: 100px;}
+.footer-bottom a {color: #787878; text-decoration: none; margin-right: 8px;}
+.scroll-to-top {position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #fff; color: #333; border: 1px solid #ddd; border-radius: 50%; font-size: 24px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+.footer-bottom a:hover {transition: color .1s; color: #AEAEAE;}
