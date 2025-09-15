@@ -19,12 +19,8 @@ a {text-decoration: none; color: #333;}
 }
 
 
-
-
 body {font-family: 'Pretendard';}
 .container {width: 1120px; height: 100%; margin: 0 auto; }
-
-
 
 
 /*   header   */
@@ -36,9 +32,7 @@ header{width: 100%; height: 115px;}
 .logo img {width: 58px; height: 55px; margin-left: 6px;}
 
 
-
 .h_right {width: 450px; height: 35px; margin-top: 5px; display: flex; justify-content: space-between;}
-
 
 
 .search {display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; padding: 0 8px; width: 260px; height: 40px; background-color: #f6f6f6; margin-left: 55px; margin-top: 2px; border: none;}
@@ -57,17 +51,14 @@ header{width: 100%; height: 115px;}
 .no-search {text-align: center;color: #bbbbbb;font-size: 15px;line-height: 1.5;padding: 20px 0;margin-top: 28px; margin-bottom: 30px;}
 
 
-
 .mypage ul {display: flex; gap: 23px; margin-top: 10px; height: 100%;}
 .mypage ul li a {font-size: 13px; font-weight:600; color: #7b7b7b; margin-right: 4px; }
-
 
 
 .title {width: 1120px; height: 58px; margin: 0 auto;}
 .title ul {width: 700px; height: 55px; margin-left: 15px; margin-top: 2px; display: flex; gap: 21px; align-items: center;}
 .title ul li a {font-size: 16px; font-weight: 600; color: #333;}
 .title ul li a:hover {transition: color .1s; color: #AEAEAE;}
-
 
 
 .header_b {width: 100%; height: 50%; display: flex; justify-content: space-between; align-items: center;}
@@ -78,11 +69,9 @@ header{width: 100%; height: 115px;}
 .header_b nav ul li a:hover {transition: color .1s; color: #AEAEAE;}
 
 
-
 .category {width: 220px; height: 40px; margin-top: 15px;}
 .category ul {display: flex;  gap: 25px; font-size: 15px;  font-weight: 600; color: #333; margin-right: 6px; margin-top: 5px;}
 .category .icon {font-size: 13px; margin-right: 6px; margin-top: 6px;}
-
 
 
 
@@ -100,24 +89,6 @@ hr{border: none; border-top: 1px solid #F0F0F0;}
 .title2 {width: 1120px; height: 45px; margin: 0 auto; margin-block-start: 40px;}
 .title2 {font-size: 22px; font-weight: 600;}
 
-
-
-.section {width: 1120px; height: 350px; margin: 0 auto;}
-
-.section2 {width: 1120px; height: 330px; margin: 0 auto;}
-
-.banner {width: 1120px; height: 235px; margin: 0 auto; background: #ffbbbb;}
-
-.section3 {width: 1120px; height: 40px; margin: 0 auto;}
-
-
-.section4 {width: 1120px; height: 40px; margin: 0 auto;}
-
-.section7 {width: 1120px; height: 330px; margin: 0 auto;}
-
-.banner2 {width: 1120px; height: 135px; margin: 0 auto; background: #ffbbbb;}
-
-.section8 {width: 1120px; height: 330px; margin: 0 auto;}
 
 
 /*   footer   */
@@ -143,8 +114,9 @@ footer{width: 100%; height: 250px;}
 .footer-sns-icon a {width: 45px; height: 45px; border: 1px solid #e3e3e3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #787878; font-size: 17px; background: #fff; transition: background 0.2s;}
 .footer-sns-icon a:hover {background-color: #f0f0f0;}
 
+
 /* 하단 정보 */
 .footer-bottom {font-size: 12px; color: #787878; margin-top: 100px;}
 .footer-bottom a {color: #787878; text-decoration: none; margin-right: 8px;}
-.scroll-to-top {position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #fff; color: #333; border: 1px solid #ddd; border-radius: 50%; font-size: 24px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+.scroll-to-top {position: fixed; bottom: 40px; right: 40px; width: 80px; height: 80px; background: #fff; color: #333; border: 1px solid #ddd; border-radius: 50%; font-size: 40px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
 .footer-bottom a:hover {transition: color .1s; color: #AEAEAE;}
