@@ -3,25 +3,103 @@
 
 
 /* slider */
-#slider {width: 1120px; height: 400px; margin: 0 auto;}
-   .swiper {
-      width: 100%;
-      height: 100%;
-    }
+#slider {
+  width: 1120px;
+  height: 400px;
+  margin: 0 auto;
+}
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 17px;
-    }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.swiper-slide {
+  text-align: center;
+  font-size: 17px;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+#slider-wrapper {
+  width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#slider {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 17px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 버튼 스타일 */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.custom-prev {
+  left: -20px;
+}
+
+.custom-next {
+  right: -20px;
+}
+
+.custom-prev span,
+.custom-next span {
+  display: inline-block;
+  transform: translateY(-3px);
+}
+
+.custom-prev span,
+.custom-next span {
+  color: rgb(64, 64, 64);
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.custom-prev:hover span,
+.custom-next:hover span {
+  color: rgb(207, 207, 207);
+}
 
 
 
@@ -30,21 +108,21 @@
   width: 1120px;
   height: 560px;
   margin: 0 auto;
-  overflow: hidden;  
+  position: relative; 
+  overflow: hidden;   
 }
 
 .section .swiper {
   width: 100%;
-  height: 98%; 
+  height: 98%;
 }
 
-/* 슬라이드 하나의 높이를 3등분 기준으로 유지하면서, 가로 정렬 */
 .section .swiper-slide {
   text-align: left;
   font-size: 21px;
   font-weight: 500;
   color: #1b1b1b;
-  height: calc((100% - 40px) / 3) !important; /* 3행 배치 의도 유지 */
+  height: calc((100% - 40px) / 3) !important; 
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -52,16 +130,16 @@
   padding: 0 8px;
 }
 
-/* 이미지: 왼쪽 고정, margin-right:auto 제거! */
+/* 이미지 */
 .section img {
   width: 100px;
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
-  /* margin-right: auto;  <-- ❌ 이거 빼야 옆에 순위/텍스트가 정상 배치됨 */
 }
 
+/* 순위 */
 .section .rank {
   font-size: 1rem;
   font-weight: 700;
@@ -71,6 +149,7 @@
   flex-shrink: 0;
 }
 
+/* 아이템 레이아웃 */
 .section .book-item {
   display: flex;
   align-items: center;
@@ -78,20 +157,30 @@
   width: 100%;
 }
 
+/* 책 정보 */
 .section .book-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 0;  /* 텍스트 줄바꿈/ellipsis 위해 필요 */
-  flex: 1;       /* 남은 공간을 텍스트가 차지 */
+  min-width: 0;
+  flex: 1;
 }
 
+/* 책 제목 & 저자 */
 .section .book-info h3,
 .section .book-info p {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.section .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;        /* 남은 공간 차지 */
+  min-width: 0;   /* ellipsis 동작에 필수 */
 }
 
 .section .book-info h3 {
@@ -105,66 +194,164 @@
   color: #555;
 }
 
+/* 버튼 */
+.section-wrapper {
+  width: 1120px;
+  margin: 0 auto;
+  position: relative; 
+}
+
+.section {
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+}
+
+.custom-prev-1,
+.custom-next-1 {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  color: rgb(64, 64, 64); 
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.custom-prev-1 { left: -20px; }
+.custom-next-1 { right: -20px; }
+
+.custom-prev-1 span,
+.custom-next-1 span {
+  display: inline-block;
+  transform: translateY(-1px); 
+  user-select: none;          
+  transition: color 0.2s ease; 
+}
+
+
+.custom-prev-1:hover span,
+.custom-next-1:hover span {
+  color: rgb(207, 207, 207);
+}
 
 
 
 
-    .section2 {
-      width: 1120px;
-      height: 380px;   /* 원하는 고정 높이 */
-      margin: 0 auto;
-      background: #ffffff; /* 확인용 */
-      overflow: hidden;
-    }
 
-    .section2 .swiper {
-      width: 100%;
-      height: 100%;
-    }
+.section2 {
+  width: 1120px;
+  height: 380px;
+  /* 원하는 고정 높이 */
+  margin: 0 auto;
+  background: #ffffff;
+  /* 확인용 */
+  overflow: hidden;
+}
 
-    .section2 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      color: #222;
+.section2 .swiper {
+  width: 100%;
+  height: 100%;
+}
 
-    }
-    .section2 img {margin: 0 auto; width: 180px; height: 270px; border-radius: 10px;}
-    .section2 h3,
-    .section2 h6 {
-      max-width: 180px;        /* 이미지 폭 맞추기 */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      text-align: left;
-      margin: 4px 0;
-      line-height: 1.2;        /* 글자가 바닥에 붙지 않도록 */
-    }
+.section2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  color: #222;
 
-    .section2 h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #222;
-    }
+}
 
-    .section2 h6 {
-      font-size: 13px;
-      color: #555;
-    }
+.section2 img {
+  margin: 0 auto;
+  width: 180px;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.section2 h3,
+.section2 h6 {
+  max-width: 180px;
+  /* 이미지 폭 맞추기 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  margin: 4px 0;
+  line-height: 1.2;
+  /* 글자가 바닥에 붙지 않도록 */
+}
+
+.section2 h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section2 h6 {
+  font-size: 13px;
+  color: #555;
+}
+.custom-prev-2,
+.custom-next-2 {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  color: rgb(64, 64, 64);
+  cursor: pointer;
+  z-index: 9999; 
+}
+
+.custom-prev-2 { left: -20px; }
+.custom-next-2 { right: -20px; }
+
+.custom-prev-2 span,
+.custom-next-2 span {
+  display: inline-block;
+  transform: translateY(-1px);
+  user-select: none;       
+  transition: color 0.2s ease;
+}
+
+.custom-prev-2:hover span,
+.custom-next-2:hover span {
+  color: rgb(207, 207, 207);
+}
 
 
 
 
-   
+
 .section3 {
   width: 1120px;
   height: 560px;
   margin: 0 auto;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .section3 .swiper {
   width: 100%;
-  height: 98%; 
+  height: 98%;
 }
 
 /* 슬라이드 하나의 높이를 3등분 기준으로 유지하면서, 가로 정렬 */
@@ -173,7 +360,8 @@
   font-size: 21px;
   font-weight: 500;
   color: #1b1b1b;
-  height: calc((100% - 40px) / 3) !important; /* 3행 배치 의도 유지 */
+  height: calc((100% - 40px) / 3) !important;
+  /* 3행 배치 의도 유지 */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -211,8 +399,10 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 0;  /* 텍스트 줄바꿈/ellipsis 위해 필요 */
-  flex: 1;       /* 남은 공간을 텍스트가 차지 */
+  min-width: 0;
+  /* 텍스트 줄바꿈/ellipsis 위해 필요 */
+  flex: 1;
+  /* 남은 공간을 텍스트가 차지 */
 }
 
 .section3 .book-info h3,
@@ -235,120 +425,143 @@
 }
 
 
- 
-
-    .section4 {
-      width: 1120px;
-      height: 380px;   /* 원하는 고정 높이 */
-      margin: 0 auto;
-      background: #ffffff; /* 확인용 */
-      overflow: hidden;
-    }
-
-    .section4 .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .section4 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      color: #222;
-
-    }
-    .section4 img {margin: 0 auto; width: 180px; height: 270px; border-radius: 10px;}
-    .section4 h3,
-    .section4 h6 {
-      max-width: 180px;        /* 이미지 폭 맞추기 */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      text-align: left;
-      margin: 4px 0;
-      line-height: 1.2;        /* 글자가 바닥에 붙지 않도록 */
-    }
-
-    .section4 h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    .section4 h6 {
-      font-size: 13px;
-      color: #555;
-    }
 
 
+.section4 {
+  width: 1120px;
+  height: 380px;
+  /* 원하는 고정 높이 */
+  margin: 0 auto;
+  background: #ffffff;
+  /* 확인용 */
+  overflow: hidden;
+}
+
+.section4 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.section4 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  color: #222;
+
+}
+
+.section4 img {
+  margin: 0 auto;
+  width: 180px;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.section4 h3,
+.section4 h6 {
+  max-width: 180px;
+  /* 이미지 폭 맞추기 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  margin: 4px 0;
+  line-height: 1.2;
+  /* 글자가 바닥에 붙지 않도록 */
+}
+
+.section4 h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section4 h6 {
+  font-size: 13px;
+  color: #555;
+}
 
 
-    .section5 {
-      width: 1120px;
-      height: 380px;   /* 원하는 고정 높이 */
-      margin: 0 auto;
-      background: #ffffff; /* 확인용 */
-      overflow: hidden;
-    }
-
-    .section5 .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .section5 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      color: #222;
-
-    }
-     .section5 img {margin: 0 auto; width: 180px; height: 270px; border-radius: 10px;}
-
-    .section5 h3,
-    .section5 h6 {
-      max-width: 180px;        /* 이미지 폭 맞추기 */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      text-align: left;
-      margin: 4px 0;
-      line-height: 1.2;        /* 글자가 바닥에 붙지 않도록 */
-    }
-
-    .section5 h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    .section5 h6 {
-      font-size: 13px;
-      color: #555;
-    }
 
 
-      
+.section5 {
+  width: 1120px;
+  height: 380px;
+  /* 원하는 고정 높이 */
+  margin: 0 auto;
+  background: #ffffff;
+  /* 확인용 */
+  overflow: hidden;
+}
+
+.section5 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.section5 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  color: #222;
+
+}
+
+.section5 img {
+  margin: 0 auto;
+  width: 180px;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.section5 h3,
+.section5 h6 {
+  max-width: 180px;
+  /* 이미지 폭 맞추기 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  margin: 4px 0;
+  line-height: 1.2;
+  /* 글자가 바닥에 붙지 않도록 */
+}
+
+.section5 h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section5 h6 {
+  font-size: 13px;
+  color: #555;
+}
 
 
-    .section6 {
-      width: 1120px;
-      height: 550px;   /* 원하는 고정 높이 */
-      margin: 0 auto;
-      background: #ffffff; /* 확인용 */
-      overflow: hidden;
-    }
 
-    .section6 .swiper {
-      width: 100%;
-      height: 80%;
-    }
 
-    .section6 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      color: #fff;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.section6 {
+  width: 1120px;
+  height: 550px;
+  /* 원하는 고정 높이 */
+  margin: 0 auto;
+  background: #ffffff;
+  /* 확인용 */
+  overflow: hidden;
+}
+
+.section6 .swiper {
+  width: 100%;
+  height: 80%;
+}
+
+.section6 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
