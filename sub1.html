@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서전자책 - 리디</title>
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_top">
+                <div class="logo">
+                    <img src="./img/RIDI_logo.svg" alt="리디 로고">
+                </div>
+                <div class="h_right">
+                  <div class="search-container">
+                    <div class="search">
+                        <img src="./img/search.png" alt="검색">
+                        <input type="text" id="search-input" />
+                    </div>
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="dropdown-header">
+                          <span>최근 검색어</span>
+                          <a href="#">검색어 저장 켜기</a>
+                        </div>
+                        <div class="no-search">검색어 저장기능이 꺼져있습니다.</div>
+                        <ul id="recent-list"></ul>
+                    </div>
+                </div>
+                    <div class="mypage">
+                        <ul>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <script>
+                  const searchInput = document.getElementById("search-input");
+                  const dropdown = document.getElementById("search-dropdown");
+                  const container = document.querySelector(".search-container");
+
+                  searchInput.addEventListener("focus", () => {
+                    dropdown.classList.add("show");
+                  });
+
+                  document.addEventListener("click", (e) => {
+                    if (!container.contains(e.target)) {
+                      dropdown.classList.remove("show");
+                    }
+                  });
+                </script>
+
+
+            <div class="header_b">
+                <nav>
+                    <ul>
+                        <li><a href="#">웹툰</a></li>
+                        <li><a href="#">만화</a></li>
+                        <li><a href="#">웹소설</a></li>
+                        <li>도서</li>
+                        <li><a href="#">셀렉트</a></li>
+                    </ul> 
+                </nav>
+                
+                <div class="category">
+                    <ul>
+                        <li class="all-category">
+                        <a href="#">
+                            <span class="icon">☰</span> 전체 카테고리
+                        </a>
+                        </li>
+                        <li class="cash">
+                        <a href="#">
+                            <span class="coin">©</span> 캐시충전
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr>
+
+
+
+
+
+
+
+
+      <hr>
+<footer class="footer">
+  <div class="container footer-wrapper">
+    <div class="footer-left">
+      <div class="footer-columns">
+        <div class="footer-column">
+            <li><i class="fas fa-headphones-alt"></i> <a href="#">고객센터</a></li>
+          </ul>
+            <li><i class="fas fa-bullhorn"></i> <a href="#">공지사항</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>서비스</h4>
+          <ul>
+            <li><a href="#">제휴카드</a></li>
+            <li><a href="#">뷰어 다운로드</a></li>
+            <li><a href="#">CP사이트</a></li>
+            <li><a href="#">리디바탕</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>기타 문의</h4>
+          <ul>
+            <li><a href="#">콘텐츠 제공 문의</a></li>
+            <li><a href="#">사업 제휴 문의</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>회사</h4>
+          <ul>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">인재채용 <span class="badge-new">N</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-sns-icon">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <p>
+      <a href="#">이용약관</a> · 
+      <a href="#" style="font-weight: 700;">개인정보 처리방침</a> · 
+      <a href="#">청소년보호정책</a> · 
+      <a href="#">사업자정보확인</a>
+    </p>
+    <p class="copyright">© RIDI Corp.</p>
+  </div>
+
+  <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+</footer>

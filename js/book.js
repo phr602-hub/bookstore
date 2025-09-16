@@ -1,4 +1,4 @@
-// 지금 많이 읽고 있는 작품
+// 지금 많이 읽고 있는 작품 
 async function bookData() {
   const REST_API_KEY = 'fdad087a1d6a396138baab34ca701d7f';
     const keywords = ["에세이", "소설"];
@@ -30,6 +30,7 @@ async function bookData() {
           if (!doc) return;
 
           slide.innerHTML = `
+          <a href="sub1.html">
             <div class="book-item">
               <img src="${doc.thumbnail || 'noimage.png'}" alt="${doc.title}">
               <span class="rank">${i + 1}</span>
@@ -38,6 +39,7 @@ async function bookData() {
                 <p>${doc.authors.length ? doc.authors.join(", ") : "저자 정보 없음"}</p>
               </div>
             </div>
+        </a>
           `;
       });
 
@@ -150,6 +152,7 @@ async function bookData3() {
           if (!doc) return;
 
           slide.innerHTML = `
+          <a href="sub1.html">
             <div class="book-item">
               <img src="${doc.thumbnail || 'noimage.png'}" alt="${doc.title}">
               <span class="rank">${i + 1}</span>
@@ -158,6 +161,7 @@ async function bookData3() {
                 <p>${doc.authors.length ? doc.authors.join(", ") : "저자 정보 없음"}</p>
               </div>
             </div>
+            </a>
           `;
       });
 
