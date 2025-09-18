@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서전자책 - 리디</title>
      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/sub1.css">
 </head>
 <body>
     <header>
@@ -42,22 +39,6 @@
                     </div>
                 </div>
             </div>
-                <script>
-                  const searchInput = document.getElementById("search-input");
-                  const dropdown = document.getElementById("search-dropdown");
-                  const container = document.querySelector(".search-container");
-
-                  searchInput.addEventListener("focus", () => {
-                    dropdown.classList.add("show");
-                  });
-
-                  document.addEventListener("click", (e) => {
-                    if (!container.contains(e.target)) {
-                      dropdown.classList.remove("show");
-                    }
-                  });
-                </script>
-
 
             <div class="header_b">
                 <nav>
@@ -90,13 +71,820 @@
     <hr>
 
 
+<body>
+
+    <!-- 전체 페이지 두묶음 나눔 -->
+    <div id="wrap">
+        <!-- main contets -->
+        <div id="mainWrap">
+            <div id="main_head">
+                <div class="thum_img">
+                    <div class="img_box"></div>
+                    <div class="boxlook">
+                        <div class="img_look">미리보기</div>
+                    </div>
+                </div>
+
+                <!-- book zoomin -->
+                <script src="sub1.js"></script>
+
+                <div class="thum_title">
+                    <p><a href="#">소설</a> &gt; <a href="#">한국소설</a></p>
+                    <div class="book_Title">
+                        <h2>어서 오세요, 휴남동 서점입니다</h2>
+                    </div>
+                    <div class="book_hStar">
+                        <span class="star_ic">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fas fa-star-half-alt"></span>
+                        </span>
+                        <span class="star_figure">4.6점</span>
+                        <span class="star_ps">(145명)</span>
+                    </div>
+
+                    <div class="book_Info">
+                        <div class="book_author">
+                            <a href="#">황보름</a>
+                            <span>저</span>
+                        </div>
+                        <div class="book_publishing">
+                            <a href="#">클레이하우스</a>
+                            <span>출판</span>
+                        </div>
+                    </div>
+
+                    <hr id="hr_book">
+                    <table>
+                        <tr>
+                            <th rowspan="3">소장</th>
+                            <td>종이책 정가</td>
+                            <td><span>15,000</span>원</td>
+                        </tr>
+                        <tr>
+                            <td>전자책 정가</td>
+                            <td>
+                                <span>30%↓</span>
+                                <span>10,500</span>원
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>판매가</td>
+                            <td class="book_blue"><span>10,500</span>원</td>
+                        </tr>
+                    </table>
+                    <div id="book_Icon">
+                        <div class="bookf_icon">
+                            <div class="heart book_ic">
+                                <span class="material-icons">favorite</span>
+                            </div>
+                            <div class="bookcart book_ic">
+                                <span class="material-icons">shopping_cart</span>
+                            </div>
+                            <div class="present book_ic">
+                                <span class="fa fa-gift"></span>
+                            </div>
+                            <div class="have">소장하기</div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="both">
+                <div class="thum_detail">
+                    <table class="thum_tb">
+                        <tr>
+                            <th>출간 정보</th>
+                            <td>2022.01.17. 전자책, 종이책 동시 출간</td>
+                            <th>듣기 기능</th>
+                            <td><span class="fa fa-headphones"></span> 듣기 가능</td>
+                        </tr>
+                        <tr>
+                            <th>파일정보</th>
+                            <td>EPUB|25.4MB|약 16.6만 자</td>
+                            <th>지원 기기</th>
+                            <td>
+                                <span class="fa fa-file-o"></span> PAPER&nbsp;&nbsp;
+                                <span class="fab fa-apple"></span> iOS&nbsp;&nbsp;
+                                <span class="fab fa-android"></span> Android&nbsp;&nbsp;
+                                <span class="fab fa-windows"></span> PC&nbsp;&nbsp;
+                                <span class='fab fa-xbox'></span> Mac
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ISBN</th>
+                            <td>9791197377181</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 작품소개 -->
+            <div id="book_intro"></div>
+
+            <!-- 출판사 서평 -->
+            <div id="publishing"></div>
+
+            <!-- 저자 프로필 -->
+            <div id="profile"></div>
+
+            <!-- 대표저서 -->
+            <div id="presenbook">
+                <div class="presentitle">
+                    <h4>대표 저서</h4>
+                    <ul class="presenul">
+                        <li class="presenli_1">인기순</li>
+                        <li>|</li>
+                        <li class="presenli_2">최신순</li>
+                        <li>|</li>
+                        <li class="presenli_3">평점순</li>
+                    </ul>
+                </div>
+                <div id="presen_Book">
+                    <div class="presenbook_Box">
+                        <div class="presen_Img"><a href="#"></a></div>
+                        <h4><a href="#"></a></h4>
+                        <div class="star_pr">
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fas fa-star-half-alt pr_s"></span>
+                            <span>145명</span>
+                        </div>
+                    </div>
+                    <div class="presenbook_Box">
+                        <div class="presen_Img">
+                            <a href="#"></a>
+                            <div class="prborrow"><a href="#">대여</a></div>
+                        </div>
+                        <h4><a href="#"></a></h4>
+                        <div class="star_pr">
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fa fa-star pr_s"></span>
+                            <span class="fas fa-star-half-alt pr_s"></span>
+                            <span class="far fa-star pr_s"></span>
+                            <span>14명</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 저자 소개 -->
+            <div id="author_intro"></div>
+
+            <!-- 목차 -->
+            <div id="sub_index"></div>
+
+            <!-- 리뷰 -->
+            <div id="sub_review">
+                <h3>리뷰</h3>
+                <div class="writeBox">
+                    <div class="starbox">
+                        <h4>구매자 별점</h4>
+                        <span>4.6</span>
+                        <span class="star_bx">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fas fa-star-half-alt"></span>
+                        </span>
+
+                        <div class="star_bar">
+                            <div class="star_scb">
+                                <span class="fa fa-star"></span>
+                                <span>5</span>
+                                <div class="star_scroll">
+                                    <div class="scroll_5"></div>
+                                </div>
+                            </div>
+                            <div class="star_scb">
+                                <span class="fa fa-star"></span>
+                                <span>4</span>
+                                <div class="star_scroll">
+                                    <div class="scroll_4"></div>
+                                </div>
+                            </div>
+                            <div class="star_scb">
+                                <span class="fa fa-star"></span>
+                                <span>3</span>
+                                <div class="star_scroll">
+                                    <div class="scroll_3"></div>
+                                </div>
+                            </div>
+                            <div class="star_scb">
+                                <span class="fa fa-star"></span>
+                                <span>2</span>
+                                <div class="star_scroll">
+                                    <div class="scroll_2"></div>
+                                </div>
+                            </div>
+                            <div class="star_scb">
+                                <span class="fa fa-star"></span>
+                                <span>1</span>
+                                <div class="star_scroll">
+                                    <div class="scroll_1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="evaluate_pr">
+                            <span class="ev_p">145</span>
+                            <span>명이 평가함</span>
+                        </div>
+                    </div>
+
+                    <div class="write">
+
+                        <div class="ev_write">
+                            <p>이 책을 평가해주세요!</p>
+                            <div class="write_1 star_message">별로에요</div>
+                            <div class="write_2 star_message">그저 그래요</div>
+                            <div class="write_3 star_message">보통이에요</div>
+                            <div class="write_4 star_message">좋아요</div>
+                            <div class="write_5 star_message">최고에요</div>
+                        </div>
+
+                        <div class="writeStar">
+                            <span class="star star_1">★</span>
+                            <span class="star star_2">★</span>
+                            <span class="star star_3">★</span>
+                            <span class="star star_4">★</span>
+                            <span class="star star_5">★</span>
+                        </div>
+
+                        <textarea name="review" id="text_review" cols="62" rows="4"
+                            placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개될 수 있습니다."></textarea>
+
+                        <div id="subjectBox">
+                            <div class="review_notice">
+                                <i class="material-icons">warning</i>
+                                리뷰 작성 유의사항
+                            </div>
+                            <div class="subject">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="check" id="check">
+                                    <span>스포일러가 있습니다.</span>
+                                </div>
+                                <div class="reviewSubject_Btn">
+                                    리뷰 남기기
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="noticeBox">
+                            <p>건전한 리뷰 정착 및 양질의 리뷰를 위해 아래 해당하는 리뷰는 비공개 조칠될 수 있음을 안내드립니다.</p>
+
+                            <ul>
+                                <li>1.타인에게 불쾌감을 주는 욕설</li>
+                                <li>2.비속어나 타인을 비방하는 내용</li>
+                                <li>3.특정 종교, 민족, 계층을 비방하는 내용</li>
+                                <li>4.해당 도서의 줄거리나 리디 서비스 이용과 관련이 없는 내용</li>
+                                <li>5.의미를 알 수 없는 내용</li>
+                                <li>6.광고 및 반복적인 글을 게시하여 서비스 품질을 떨어트리는 내용</li>
+                                <li>7.저작권상 문제의 소지가 있는 내용</li>
+                                <li>8.다른 리뷰에 대한 반박이나 논쟁을 유발하는 내용</li>
+                                <li>*결말을 예상할 수 있는 리뷰는 자제하여 주시기 바랍니다.</li>
+                            </ul>
+
+                            <p>이 외에도 건전한 리뷰 문화 형성을 위한 운영 목적과 취지에 맞지 않는 내용은 담당자에 의해 리뷰가 비공개 처리가 될 수 있습니다.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="purchase_review">
+                    <div class="purchaseNav">
+                        <ul class="pN1">
+                            <li class="pn1_1">구매자 8</li>
+                            <li class="pn1_2">전체 8</li>
+                        </ul>
+
+                        <ul class="pN2">
+                            <li class="pn2_1">최신순</li>
+                            <li>|</li>
+                            <li class="pn2_2">공감순</li>
+                            <li class="pn2_hide">|</li>
+                            <li class="pn2_hide pn2_3">별점 높은순</li>
+                            <li class="pn2_hide">|</li>
+                            <li class="pn2_hide pn2_4">별점 낮은순</li>
+                        </ul>
+                    </div>
+
+                    <div class="purchaseReview">
+                        <!-- 1 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>dke***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.07.15</span>
+                                    <span class="declare"><a href="index.html">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>마음을 잔잔하게 해주는 책이에요. 저는 한번 더 읽으려고합니다. 추천합니다.</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>ykm***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.07.14</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>여름보다는 겨울에 따뜻한 난로 옆에서 커피와 함꼐 읽기 좋은 편안하고 마음이 따뜻해지는 소설</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starnone"></i>
+                                    <i class="fa fa-star starnone"></i>
+                                    <i class="fa fa-star starnone"></i>
+                                    <i class="fa fa-star starnone"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>yun***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.06.13</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>생각보다 흡입력이 떨어지네요</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>you***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.06.13</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>읽으면서 참 위로를 받았고 가능하다면 2권도 만들어 주셨으면 좋겠습니다.</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>ehd***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.06.08</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>공감되고 재밌습니다.</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starnone"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>cjy***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.06.06</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>읽다보면 편안해지는 글이에요.</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 7 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>ksh***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.04.29</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>재미있다. 그리고 내 삶을 되돌아 볼 수 있는 울림이 있다. 한번 읽으면 책을 내려놓기 어렵게하는 책이다.</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 8 -->
+                        <div class="prBox">
+                            <div class="reviewStar">
+                                <div class="rstar">
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                    <i class="fa fa-star starcolor"></i>
+                                </div>
+                                <div class="rid">
+                                    <span>hsd***</span>
+                                    <div class="puchper">구매자</div>
+                                </div>
+                                <div class="rdate">
+                                    <span class="date">2022.04.20</span>
+                                    <span class="declare"><a href="#">신고</a></span>
+                                </div>
+                            </div>
+                            <div class="reviewText">
+                                <p>큰 감정기복이 필요없는 책장을 넘기는것 자체로 의미가 있었던, 책을 읽는 것만으로 휴식이 가능했던 책</p>
+                                <div class="reviewIcon">
+                                    <div class="comment">
+                                        <i class="fa fa-comment"></i>
+                                        <span>댓글</span>
+                                    </div>
+                                    <div class="recommendation">
+                                        <i class="material-icons">thumb_up</i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="remark">
+                            구매자 표시 기준은 무엇인가요?
+                            <span class="up material-icons">expand_less</span>
+                            <span class="material-icons down">expand_more </span>
+                        </p>
+
+                        <div class="remarkStandard">
+                            <p>'구매자' 표시는 리디에서 유료도서 결제 후 다운로드 하시거나 리디셀렉트 도서를 다운로드 하신 경우에만 표시됩니다.</p>
+                            <dl>
+                                <dt>무료도서 (프로모션 등으로 무료로 전환된 도서 포함)</dt>
+                                <dd>'구매자'로 표시되지 않습니다.</dd>
+                                <dt>시리즈 도서 내 무료 도서</dt>
+                                <dd>'구매자'로 표시되지 않습니다. 하지만 같은 시리즈의 유료 도서를 결제한 뒤 리뷰를 수정하거나 재등록하면 '구매자'로 표시됩니다.</dd>
+                                <dt>영구 삭제</dt>
+                                <dd>도서를 영구 삭제해도 '구매자' 표시는 남아있습니다.</dd>
+                                <dt>결제 취소</dt>
+                                <dd>'구매자' 표시가 자동으로 사라집니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="anotherBook">
+                <h3>이 책과 함께 구매한 책</h3>
+                <div id="anBook">
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="an_book">
+                        <div class="anImg"><a href="#"></a></div>
+                        <div class="anText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="aroundBook">
+                <h3>이 책과 함께 둘러본 책</h3>
+                <div id="arBook">
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg">
+                            <a href="#"></a>
+                            <div class="ardiscount">10%</div>
+                        </div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                    <div class="ar_book">
+                        <div class="arImg"><a href="#"></a></div>
+                        <div class="arText">
+                            <h4><a href="#"></a></h4>
+                            <p><a href="#"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- side -->
+        <div id="subWrap">
+
+            <div class="sub_bestseller">
+                <h5>한국소설 베스트 셀러</h5>
+                <table>
+                    <tr>
+                        <th>1위</th>
+                        <td><a href="#">불편한 편의점</a></td>
+                    </tr>
+                    <tr>
+                        <th>2위</th>
+                        <td><a href="#">수연 선배가 우화등선 했대</a></td>
+                    </tr>
+                    <tr>
+                        <th>3위</th>
+                        <td><a href="#">작별인사</a></td>
+                    </tr>
+                    <tr>
+                        <th>4위</th>
+                        <td><a href="#">친밀한 이방인</a></td>
+                    </tr>
+                    <tr>
+                        <th>5위</th>
+                        <td><a href="#">어서오세요, 휴남동...</a></td>
+                    </tr>
+                    <tr>
+                        <th>6위</th>
+                        <td><a href="#">칵테일, 러브, 좀비</a></td>
+                    </tr>
+                    <tr>
+                        <th>7위</th>
+                        <td><a href="#">홍학의 자리</a></td>
+                    </tr>
+                    <tr>
+                        <th>8위</th>
+                        <td><a href="#">악마의 계약서는 만기 되지...</a></td>
+                    </tr>
+                    <tr>
+                        <th>9위</th>
+                        <td><a href="#">밝은 밤</a></td>
+                    </tr>
+                    <tr>
+                        <th>10위</th>
+                        <td><a href="#">아몬드</a></td>
+                    </tr>
+                </table>
+                <div class="sub_show_btn">
+                    더보기
+                    <i class="material-icons">play_arrow</i>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- js 가져오기 -->
+    <!-- txt 가져오기 -->
+    <script src="./sub_txt/txt1.txt"></script>
 
+    <!-- ajax로 책 썸네일 가져오기 -->
+    <!-- 평점 별 찍기 -->
+    <script src="js/sub1.js"></script>
 
-
-
-      <hr>
+    <!-- footer -->
+  <hr>
 <footer class="footer">
   <div class="container footer-wrapper">
     <div class="footer-left">
@@ -146,7 +934,7 @@
 
   <div class="footer-bottom container">
     <p>
-      <a href="#">이용약관</a> · 
+      <a href="./sub3.html">이용약관</a> · 
       <a href="#" style="font-weight: 700;">개인정보 처리방침</a> · 
       <a href="#">청소년보호정책</a> · 
       <a href="#">사업자정보확인</a>
@@ -156,3 +944,10 @@
 
   <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 </footer>
+
+
+<script src ="./js/sub1.js"></script>
+
+</body>
+
+</html>

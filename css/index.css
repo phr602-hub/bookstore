@@ -167,6 +167,7 @@
 }
 
 /* 책 제목 & 저자 */
+.section .book-info h3{width: 160px;}
 .section .book-info h3,
 .section .book-info p {
   margin: 0;
@@ -405,6 +406,7 @@
   /* 남은 공간을 텍스트가 차지 */
 }
 
+.section3 .book-info h3{width: 160px;}
 .section3 .book-info h3,
 .section3 .book-info p {
   margin: 0;

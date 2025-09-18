@@ -1,0 +1,1773 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OTWelcomeRA";
+}
+
+.header_inner {
+  width: 1120px;  
+  height: 100%;
+  margin: 0 auto;  
+}
+
+
+
+.footer-inner {
+  width: 1120px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.container {width: 1120px; height: 100%; margin: 0 auto; }
+
+
+/*   header   */
+header{width: 100%; height: 115px;}
+.header_top {width: 100%; height: 50%; display: flex; justify-content: space-between; align-items: center; }
+
+
+.logo {width: 70px; height: 45px;}
+.logo img {width: 58px; height: 55px; margin-left: 6px;}
+
+
+.h_right {width: 450px; height: 35px; margin-top: 5px; display: flex; justify-content: space-between;}
+
+
+.search {display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; padding: 0 8px; width: 260px; height: 40px; background-color: #f6f6f6; margin-left: 55px; margin-top: 2px; border: none;}
+.search input {border: none; outline: none; flex: 1; font-size: 18px;background-color: #f6f6f6; margin-left: 13px;  caret-color: #1E9EFF;}
+.search img {width: 20px; height: 20px;}
+
+/*  최근검색어 창  */
+.search-container {position: relative;}
+.search-dropdown {position: absolute; top: 50px; left: 55px;width: 470px;background: white;border: 1px solid #f0f0f0;border-radius: 12px;display: none;z-index: 999;padding: 20px; box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.08);}
+
+.dropdown-header span {font-size: 14px; font-weight: bold;}
+.dropdown-header a {font-weight: normal; color: #999; font-size: 12px; text-decoration: none;}
+.search-dropdown.show {display: block;}
+.dropdown-header {display: flex;justify-content: space-between;margin-bottom: 20px;font-weight: bold;}
+#recent-list {list-style: none;padding: 0;margin: 0;}
+.no-search {text-align: center;color: #bbbbbb;font-size: 15px;line-height: 1.5;padding: 20px 0;margin-top: 28px; margin-bottom: 30px;}
+
+
+.mypage ul {display: flex; gap: 23px; margin-top: 10px; height: 100%;}
+.mypage ul li a {font-size: 13px; font-weight:600; color: #7b7b7b; margin-right: 4px; }
+
+
+.title {width: 1120px; height: 58px; margin: 0 auto;}
+.title ul {width: 700px; height: 55px; margin-left: 15px; margin-top: 2px; display: flex; gap: 21px; align-items: center;}
+.title ul li a {font-size: 16px; font-weight: 600; color: #333;}
+.title ul li a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+.header_b {width: 100%; height: 50%; display: flex; justify-content: space-between; align-items: center;}
+.header_b nav {width: 300px; height: 15px;}
+.header_b nav ul {display: flex; gap: 24px; margin-left: 6px;}
+.header_b nav ul li a {font-size: 16px; font-weight: 600; color: #333;}
+.header_b nav ul li {font-size: 16px; font-weight: 600; color: #1E9EFF;}
+.header_b nav ul li a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+.category {width: 220px; height: 40px; margin-top: 15px;}
+.category ul {display: flex;  gap: 25px; font-size: 15px;  font-weight: 600; color: #333; margin-right: 6px; margin-top: 5px;}
+.category .icon {font-size: 13px; margin-right: 6px; margin-top: 6px;}
+
+
+
+.category2 { width: 1120px; margin: 0 auto; padding: 28px 0 32px; background: #fff; margin-top: 5px;}
+.round-menu ul {display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 0; margin-top: 2px; padding: 0; list-style: none;} 
+.round-menu ul li {display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.round-menu ul li a {display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #222; font-size: 14px; font-weight: 400; white-space: nowrap; gap: 5px;}
+.category2 img {width: 70px; height: 70px; display: flex;}
+
+
+
+hr{border: none; border-top: 1px solid #F0F0F0;}
+
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#logo a img:nth-child(2) {
+  display: none;
+}
+
+body {
+  position: relative;
+}
+
+.imgZoomIn {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1500;
+  display: none;
+}
+
+.imgZoomIn .zoomIn {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.imgZoomIn .zoomIn .zoominCloseBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  line-height: 55px;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  left: 65%;
+  top: 7%;
+  transform: translate(-50%, -50%);
+  z-index: 80;
+  cursor: zoom-out;
+}
+
+.imgZoomIn .zoomIn img {
+  width: 519px;
+  height: 770px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+}
+
+#wrap #mainWrap {
+  width: 793px;
+  height: auto;
+}
+
+#wrap #mainWrap #main_head {
+  width: 100%;
+  height: 587.36px;
+  padding: 40px 29px;
+}
+
+#wrap #mainWrap #main_head .thum_img {
+  width: 220px;
+  height: 344px;
+  float: left;
+}
+
+#wrap #mainWrap #main_head .thum_img .img_box {
+  width: 200px;
+  height: 292px;
+}
+
+#wrap #mainWrap #main_head .thum_img .img_box img {
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+#wrap #mainWrap #main_head .thum_img .boxlook {
+  width: 200px;
+}
+
+#wrap #mainWrap #main_head .thum_img .boxlook .img_look {
+  border: 1px solid #1f8ce6;
+  border-radius: 5px;
+  width: 130px;
+  height: 39px;
+  margin: 12px auto 0;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #main_head .thum_img .boxlook .img_look:hover {
+  background-color: rgba(31, 140, 230, 0.1);
+}
+
+#wrap #mainWrap #main_head .thum_title {
+  width: 500px;
+  height: 357.36px;
+  float: right;
+}
+
+#wrap #mainWrap #main_head .thum_title p {
+  width: 100%;
+  height: 14px;
+  font-size: 13px;
+  color: #333;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #main_head .thum_title p a:hover {
+  color: #1f8ce6 !important;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Title {
+  width: 100%;
+  height: 35px;
+  color: #333;
+  margin-top: 8px !important;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Title h2 {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  margin-top: 8px !important;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_hStar {
+  width: 100%;
+  height: 16.36px;
+  margin-top: 17px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #main_head .thum_title .book_hStar .star_ic {
+  height: 15px;
+  font-size: 15px;
+  color: #fa722e;
+  letter-spacing: -0.1em;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_hStar .star_figure {
+  font-size: 15px;
+  padding-left: 3px;
+  color: #fa722e;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_hStar .star_ps {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: -3px;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info {
+  width: 100%;
+  height: 39px;
+  margin: 20px 0;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_author {
+  width: 100%;
+  height: 22px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #888 !important;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_author a {
+  font-weight: bold;
+  color: #666 !important;
+  letter-spacing: 0.1em;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_author a:hover {
+  color: #1f8ce6 !important;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_publishing {
+  width: 100%;
+  height: 17px;
+  font-size: 13px;
+  color: #888 !important;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_publishing a {
+  font-weight: bold;
+  color: #666 !important;
+  letter-spacing: 0.1em;
+}
+
+#wrap #mainWrap #main_head .thum_title .book_Info .book_publishing a:hover {
+  color: #1f8ce6 !important;
+}
+
+#wrap #mainWrap #main_head .thum_title #hr_book {
+  border-top: 2px solid #d1d5d9;
+  margin-bottom: 14px;
+}
+
+#wrap #mainWrap #main_head .thum_title table {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #d1d5d9;
+  border-bottom: 1px solid #d1d5d9;
+}
+
+#wrap #mainWrap #main_head .thum_title table th {
+  width: 171.88px;
+  text-align: center;
+  border-right: 1px solid #d1d5d9;
+  background-color: #f7fafc;
+}
+
+#wrap #mainWrap #main_head .thum_title table tr td:nth-of-type(1) {
+  width: 156px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  color: #777;
+}
+
+#wrap #mainWrap #main_head .thum_title table tr td:nth-of-type(2) {
+  width: 156px;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 5px;
+  color: #777;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#wrap #mainWrap #main_head .thum_title table .book_blue {
+  color: #1f8ce6 !important;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon {
+  width: 100%;
+  height: 48px;
+  margin-top: 15px;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon {
+  width: 271px;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .book_ic {
+  width: 48px;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #d1d5d9;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .heart {
+  font-size: 20px;
+  color: #888;
+  position: relative;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .heart span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .bookcart {
+  font-size: 20px;
+  color: #888;
+  position: relative;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .bookcart span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .present {
+  font-size: 25px;
+  color: #888;
+  position: relative;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .present span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .book_ic:hover {
+  background-color: rgba(209, 213, 217, 0.3);
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .have {
+  width: 112px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #1f8ce6;
+  border: 1px solid #0077d9;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #main_head .thum_title #book_Icon .bookf_icon .have:hover {
+  background-color: #0077d9;
+}
+
+#wrap #mainWrap #main_head .both {
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#wrap #mainWrap #main_head .thum_detail {
+  width: 733px;
+  height: 110px;
+  margin-top: 40px;
+  padding: 20px 26px 13px;
+  border: 4px solid #f2f4f5;
+}
+
+#wrap #mainWrap #main_head .thum_detail .thum_tb {
+  width: 90%;
+  height: 100%;
+}
+
+#wrap #mainWrap #main_head .thum_detail .thum_tb tr {
+  font-size: 12px;
+  color: #777;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #main_head .thum_detail .thum_tb tr th {
+  color: #555 !important;
+}
+
+#wrap #mainWrap #main_head .thum_detail .thum_tb tr td span {
+  font-size: 12px;
+}
+
+#wrap #mainWrap #book_intro {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 70px 29px;
+}
+
+#wrap #mainWrap #book_intro h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #book_intro p {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #book_intro .bookdetailNone {
+  display: none;
+}
+
+#wrap #mainWrap #book_intro .bookdetailMore {
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #book_intro .bookdetailFolder {
+  display: none;
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #publishing {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 70px 29px;
+}
+
+#wrap #mainWrap #publishing h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #publishing p {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #publishing .publishingreviewNone {
+  display: none;
+}
+
+#wrap #mainWrap #publishing .publishingreviewMore {
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #publishing .publishingreviewFolder {
+  display: none;
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #profile {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 20px 29px;
+}
+
+#wrap #mainWrap #profile h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #profile h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #333;
+  padding-top: 10px;
+}
+
+#wrap #mainWrap #profile .author_btn {
+  width: 168px;
+  height: 30.25px;
+  padding: 8px 27px 7px 8px;
+  text-align: center;
+  color: #1f8ce6;
+  border: 1px solid #1f8ce6;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  border-radius: 5px;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #profile .author_btn i {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap #mainWrap #profile .author_btn span {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 15px;
+  color: #1f8ce6;
+}
+
+#wrap #mainWrap #profile .author_btn:hover {
+  background-color: #ebf6ff;
+}
+
+#wrap #mainWrap #profile .tit {
+  font-size: 13px;
+  color: #888;
+  margin-right: 7px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #profile .cot {
+  font-size: 13px;
+  color: #333;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #profile span {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #profile .update {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#wrap #mainWrap #profile .update span {
+  font-size: 12px;
+  color: #999;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#wrap #mainWrap #profile .update .update_btn {
+  width: 132px;
+  height: 21px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #d1d5d9;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  color: #999;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #profile .update .update_btn i {
+  font-size: 11px;
+}
+
+#wrap #mainWrap #profile .update .update_btn:hover {
+  background-color: rgba(209, 213, 217, 0.3);
+}
+
+#wrap #mainWrap #profile .hr_gray {
+  width: 100% !important;
+}
+
+#wrap #mainWrap #presenbook {
+  width: 735px;
+  margin: 0 auto;
+  height: auto;
+  padding: 0 0px 30px 29px;
+}
+
+#wrap #mainWrap #presenbook .presentitle {
+  width: 100%;
+  height: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #presenbook .presentitle h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul {
+  width: 480px;
+  height: 16px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul li {
+  font-size: 12px;
+  color: #888;
+  padding-left: 10px;
+  padding-right: 2px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul li:nth-of-type(odd) {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul li:nth-of-type(even) {
+  color: #d1d5d9;
+  font-size: 13px;
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul li:nth-of-type(odd):hover {
+  color: #333;
+}
+
+#wrap #mainWrap #presenbook .presentitle .presenul .presen_black {
+  color: #333;
+}
+
+#wrap #mainWrap #presenbook #presen_Book {
+  margin-top: 30px;
+  width: 100%;
+  height: 243.09px;
+  padding: 10px 0 20px 0;
+  display: flex;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box {
+  width: 147px;
+  height: 193.05px;
+  margin-top: 20px;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .presen_Img {
+  width: 90px;
+  height: 131.45px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .presen_Img .prborrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #15967d;
+  background-color: #3ea590;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  top: -7px;
+  left: -7px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .presen_Img .prborrow a {
+  color: #fff !important;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .presen_Img a img {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box h4 {
+  font-size: 12px;
+  width: 90px;
+  height: auto;
+  font-weight: bold;
+  color: #333;
+  margin: 6px auto 0;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .star_pr {
+  width: 90px;
+  height: 13px;
+  margin: 0 auto;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .star_pr .pr_s {
+  font-size: 9px !important;
+  letter-spacing: -0.3em !important;
+  color: #fa722e;
+}
+
+#wrap #mainWrap #presenbook #presen_Book .presenbook_Box .star_pr span {
+  font-size: 10px !important;
+  letter-spacing: -0.1em;
+}
+
+#wrap #mainWrap #author_intro {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 40px 29px;
+}
+
+#wrap #mainWrap #author_intro h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #author_intro p {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #sub_index {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 40px 29px;
+}
+
+#wrap #mainWrap #sub_index h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #sub_index div {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #sub_index p {
+  color: #333;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  line-height: 1.7em;
+}
+
+#wrap #mainWrap #sub_index .subindexNone {
+  display: none;
+}
+
+#wrap #mainWrap #sub_index .subindexMore {
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_index .subindexFolder {
+  display: none;
+  float: right;
+  color: #1f8ce6;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review {
+  width: 100%;
+  height: auto;
+  padding: 0 29px 70px 29px;
+}
+
+#wrap #mainWrap #sub_review h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 25px;
+}
+
+#wrap #mainWrap #sub_review .writeBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-top: 14px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox {
+  width: 120px;
+  height: auto;
+  padding: 30px 10px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox h4 {
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  color: #333;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bx {
+  width: 100%;
+  height: 17px;
+  margin-top: -5px !important;
+  display: flex;
+  justify-content: center;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bx span {
+  font-size: 13px;
+  color: #fa722e !important;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar {
+  width: 100%;
+  height: 128px;
+  padding: 8px 0 10px 0;
+  margin-bottom: 3px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb {
+  width: 100%;
+  height: 14px;
+  margin-top: 8px;
+  color: #808991;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #808991;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb span:nth-of-type(1) {
+  font-size: 11px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll {
+  width: 72px;
+  height: 8px;
+  align-self: center;
+  background-color: #e8edf3;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll .scroll_5 {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to bottom, #9da9b5, #718392);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll .scroll_4 {
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to bottom, #9da9b5, #718392);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll .scroll_3 {
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(to bottom, #9da9b5, #718392);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll .scroll_2 {
+  width: 3%;
+  height: 100%;
+  background: linear-gradient(to bottom, #9da9b5, #718392);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .star_bar .star_scb .star_scroll .scroll_1 {
+  width: 3%;
+  height: 100%;
+  background: linear-gradient(to bottom, #9da9b5, #718392);
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .evaluate_pr {
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #d1d5d9;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 7px 0 0;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .evaluate_pr .ev_p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #808991;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #sub_review .writeBox .starbox .evaluate_pr span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #808991;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write {
+  width: 615px;
+  height: auto;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write {
+  width: 100%;
+  height: 37.14px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write p {
+  text-align: center;
+  font-size: 19px;
+  color: #888;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .star_message {
+  width: 120px;
+  height: 100%;
+  border: 1px solid #1f8ce6;
+  background-color: #1f8ce6;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  padding: 9px 15px;
+  text-align: center;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .star_message::after {
+  border-top: 8px solid #1f8ce6;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .write_1 {
+  display: none;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .write_2 {
+  display: none;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .write_3 {
+  display: none;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .write_4 {
+  display: none;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .ev_write .write_5 {
+  display: none;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .writeStar {
+  width: 100%;
+  text-align: center;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write .writeStar .star {
+  font-size: 60px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #text_review {
+  margin-left: 7px;
+  border-radius: 5px;
+  border: 2px solid rgb(199, 198, 198);
+  resize: vertical;
+  padding: 10px;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .review_notice {
+  width: 147px;
+  height: 30px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  text-align: center;
+  padding-left: 15px;
+  line-height: 35px;
+  color: #777;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .review_notice i {
+  color: #777;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .review_notice:hover {
+  background-color: rgba(187, 187, 187, 0.2);
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .subject {
+  width: 250px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .subject .checkbox {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .subject .checkbox #check {
+  width: 20px;
+  height: 20px;
+  margin-top: -4px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .subject .checkbox span {
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #subjectBox .subject .reviewSubject_Btn {
+  width: 95px;
+  height: 30px;
+  border: 1px solid rgba(31, 140, 230, 0.8);
+  border-radius: 5px;
+  background-color: rgba(31, 140, 230, 0.6);
+  text-align: center;
+  line-height: 32px;
+  color: white;
+  font-size: 14px;
+  cursor: default;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #noticeBox {
+  width: 100%;
+  height: 316px;
+  background-color: #f2f4f5;
+  border-radius: 5px;
+  padding: 16px 25px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #noticeBox p {
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+  text-align: left;
+  color: #222;
+  font-weight: bold;
+  padding-top: 7px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #noticeBox ul {
+  padding: 10px 0px;
+}
+
+#wrap #mainWrap #sub_review .writeBox .write #noticeBox ul li {
+  color: #666;
+  font-size: 13px;
+  font-family: "NanumBarunGothic";
+}
+
+#wrap #mainWrap #sub_review #purchase_review {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav {
+  width: 100%;
+  height: 37px;
+  border-bottom: 2px solid #d1d5d9;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN1 {
+  display: flex;
+  width: 50%;
+  height: 37px;
+  align-items: flex-end;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN1 .hover_line {
+  border-bottom: 2px solid #666;
+  color: #444 !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN1 li {
+  font-size: 16px;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+  color: #888 !important;
+  line-height: 45px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN1 li:hover {
+  border-bottom: 2px solid #666;
+  color: #444 !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN2 {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+  height: 37px;
+  align-items: flex-end;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN2 li {
+  font-size: 14px;
+  padding-right: 10px;
+  width: auto;
+  height: 100%;
+  display: inline-block;
+  color: #888 !important;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN2 li:nth-child(2n) {
+  color: #ddd !important;
+  width: 1px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN2 li:hover {
+  color: #666 !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseNav .pN2 .hover_black {
+  color: #444 !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview {
+  width: 100%;
+  height: auto;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox {
+  width: 100%;
+  height: 93px;
+  padding-top: 14px;
+  border-top: 1px solid #d1d5d9;
+  display: flex;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar {
+  width: 115px;
+  height: 100%;
+  padding: 1px 0 15px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rstar {
+  width: 100%;
+  height: 15px;
+  font-size: 11px !important;
+  margin-bottom: 5px;
+  letter-spacing: -0.1em;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rid {
+  width: 100%;
+  height: 21px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rid span {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "NanumBarunGothic";
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rid .puchper {
+  width: 35px;
+  height: 18px;
+  color: white;
+  padding: 4px 0 0 0;
+  background-color: #7d8e9e;
+  border-radius: 3px;
+  margin-left: 3px;
+  font-size: 10px;
+  text-align: center;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rdate {
+  width: 100%;
+  height: 21px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rdate .date {
+  font-size: 11px;
+  color: #999;
+  font-weight: bold;
+  font-family: "NanumBarunGothic";
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rdate .date::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-top: 1px;
+  margin-left: 5px;
+  margin-right: 3px;
+  border-radius: 3px;
+  background-color: #e6e6e6;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewStar .rdate .declare {
+  font-family: "NanumBarunGothic";
+  font-weight: bold;
+  font-size: 12px;
+  color: #555;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText {
+  width: 620px;
+  height: 100%;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText p {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon .comment {
+  padding: 6px 14px;
+  border: 1px solid #d1d5d9;
+  margin-right: 3px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: #fff;
+  color: #808991;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon .recommendation {
+  padding: 6px 14px;
+  border: 1px solid #d1d5d9;
+  margin-right: 3px;
+  margin-left: 3px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: #fff;
+  color: #808991;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon .recommendation i {
+  font-size: 12px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon .comment:hover {
+  background: rgba(209, 213, 217, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox .reviewText .reviewIcon .recommendation:hover {
+  background: rgba(209, 213, 217, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox:nth-child(1) {
+  border-top: none !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .prBox:nth-child(8) {
+  border-bottom: 1px solid #d1d5d9 !important;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remark {
+  margin-top: 20px;
+  position: relative;
+  color: #999;
+  cursor: pointer;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remark .up {
+  display: none;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remark .down {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remark:hover {
+  color: #333;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remarkStandard {
+  width: 100%;
+  height: 268px;
+  padding: 24px;
+  margin: 7px 0 0;
+  background-color: #f3f4f5;
+  border-radius: 3px;
+  color: #666;
+  display: none;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remarkStandard p {
+  color: #333;
+  font-weight: bold;
+  font-family: "NanumBarunGothic";
+  font-size: 13px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remarkStandard dt {
+  font-weight: bold;
+  color: #888;
+  margin-top: 10px;
+  font-family: "NanumBarunGothic";
+  font-size: 13px;
+}
+
+#wrap #mainWrap #sub_review #purchase_review .purchaseReview .remarkStandard dd {
+  color: #888;
+  font-family: "NanumBarunGothic";
+  font-size: 13px;
+}
+
+#wrap #mainWrap #anotherBook {
+  width: 100%;
+  height: 600px;
+  padding: 0 29px 70px 29px;
+}
+
+#wrap #mainWrap #anotherBook h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #anotherBook #anBook {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book {
+  width: 145px;
+  height: 200px;
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anImg {
+  width: 90px;
+  height: 135px;
+  margin: 0 auto;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anImg a img {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anText {
+  width: 90px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anText h4 {
+  font-size: 12px;
+  text-align: left;
+  margin-top: 5px !important;
+  margin-bottom: 2px !important;
+  font-weight: bold;
+  line-height: 12px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anText p {
+  text-align: left;
+}
+
+#wrap #mainWrap #anotherBook #anBook .an_book .anText p a {
+  font-size: 12px;
+  color: #777 !important;
+  line-height: 12px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #aroundBook {
+  width: 100%;
+  height: 600px;
+  padding: 0 29px 70px 29px;
+}
+
+#wrap #mainWrap #aroundBook h3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SUIT-Medium";
+  color: #59667a;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #7d8e9e;
+  margin-bottom: 20px;
+}
+
+#wrap #mainWrap #aroundBook #arBook {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book {
+  width: 145px;
+  height: 200px;
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arImg {
+  width: 90px;
+  height: 135px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arImg a img {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arImg .ardiscount {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #59667a;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  padding-top: 1px;
+  font-size: 13px;
+  top: -10px;
+  left: -10px;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arText {
+  width: 90px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arText h4 {
+  font-size: 12px;
+  text-align: left;
+  margin-top: 5px !important;
+  margin-bottom: 2px !important;
+  font-weight: bold;
+  line-height: 12px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arText p {
+  text-align: left;
+}
+
+#wrap #mainWrap #aroundBook #arBook .ar_book .arText p a {
+  font-size: 12px;
+  color: #777 !important;
+  line-height: 12px;
+  font-family: "SUIT-Medium";
+}
+
+#wrap .color_red {
+  color: #fa722e !important;
+}
+
+#wrap .starcolor {
+  color: #fa722e !important;
+}
+
+#wrap .starnone {
+  color: #ddd !important;
+}
+
+#wrap .standardcolor {
+  color: #333 !important;
+}
+
+#wrap #subWrap {
+  width: 207px;
+  height: 581.5px;
+}
+
+#wrap #subWrap .sub_book {
+  width: 100%;
+  height: 207px;
+  border-bottom: 1px solid #e6e8eb;
+  margin-bottom: 40px;
+}
+
+#wrap #subWrap .sub_book a img {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap #subWrap .sub_bestseller {
+  width: 100%;
+  height: 343.5px;
+  padding: 0 18px;
+}
+
+#wrap #subWrap .sub_bestseller h5 {
+  font-weight: bold;
+}
+
+#wrap #subWrap .sub_bestseller table {
+  width: 100%;
+}
+
+#wrap #subWrap .sub_bestseller table tr {
+  border-top: 1px solid #e6e8eb;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+#wrap #subWrap .sub_bestseller table tr th {
+  width: 25px;
+  color: #e64938;
+  font-size: 12px;
+  padding: 4px 0 4px 0;
+}
+
+#wrap #subWrap .sub_bestseller table tr td {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+#wrap #subWrap .sub_bestseller table tr td a:hover {
+  color: #1f8ce6 !important;
+}
+
+#wrap #subWrap .sub_bestseller .sub_show_btn {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  line-height: 20px;
+  padding-top: 3px;
+  border-bottom: 1px solid #e6e8eb;
+  cursor: pointer;
+  color: #666;
+}
+
+#wrap #subWrap .sub_bestseller .sub_show_btn i {
+  font-size: 13px;  
+  position: absolute;
+  color: #666;
+}
+
+#wrap #subWrap .sub_bestseller .sub_show_btn:hover {
+  background-color: #e6e8eb;
+}
+
+/*   footer   */
+footer{width: 100%; height: 250px;}
+.footer {background-color: #fff; color: #787878; font-size: 12px; line-height: 1.8; padding: 48px 0 64px; border-top: 1px solid #eee; position: relative;}
+.footer-wrapper {display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;}
+.footer-left {display: flex; flex: 1;}
+.footer-columns {display: flex; flex-wrap: wrap; gap: 115px;}
+.footer-column h4 {font-weight: bold; margin-bottom: 12px; font-size: 15px;}
+.footer-column ul {list-style: none; padding: 0; margin: 0;}
+.footer-column li {margin-bottom: 6px; display: flex; align-items: center; gap: 6px;}
+.footer-column a {color: #787878; text-decoration: none;}
+.footer-column a:hover {text-decoration: none;}
+.footer-column i {color: #888; font-size: 14px;}
+.badge-new {background: #00c8ff; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 999px; margin-left: 4px;}
+.footer-column a:hover {transition: color .1s; color: #AEAEAE;}
+
+
+
+/* SNS 오른쪽 원형 아이콘 */
+.footer-right {display: flex; flex-direction: column; align-items: flex-end; margin-top: 4px;}
+.footer-sns-icon {display: flex; gap: 10px;}
+.footer-sns-icon a {width: 45px; height: 45px; border: 1px solid #e3e3e3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #787878; font-size: 17px; background: #fff; transition: background 0.2s;}
+.footer-sns-icon a:hover {background-color: #f0f0f0;}
+
+
+/* 하단 정보 */
+.footer-bottom {font-size: 12px; color: #787878; margin-top: 100px;}
+.footer-bottom a {color: #787878; text-decoration: none; margin-right: 8px;}
+.scroll-to-top {position: fixed; bottom: 40px; right: 40px; width: 80px; height: 80px; background: #fff; color: #333; border: 1px solid #ddd; border-radius: 50%; font-size: 40px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+.footer-bottom a:hover {transition: color .1s; color: #AEAEAE;}

@@ -88,7 +88,7 @@ async function bookData2() {
             const doc = data.documents[i];
 
             if (!doc) return; // 데이터가 부족할 경우 생략
-
+ 
             // <img>
             const img = document.createElement("img");
             img.src = doc.thumbnail;
